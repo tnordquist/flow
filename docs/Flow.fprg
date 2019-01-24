@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="xande"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-01-24 01:52:45 PM"/>
+        <attribute name="created" value="eGFuZGU7REVTS1RPUC1BRDIySUg3OzIwMTktMDEtMjQ7MDE6Mzg6MjcgUE07MjgyOA=="/>
+        <attribute name="edited" value="eGFuZGU7REVTS1RPUC1BRDIySUg3OzIwMTktMDEtMjQ7MDE6NTI6NDUgUE07MTsyOTMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="secret" type="Integer" array="False" size=""/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <declare name="quit" type="Boolean" array="False" size=""/>
+            <assign variable="secret" expression="random(100) + 1"/>
+            <output expression="&quot;Please enter a number between 1 and 100. Or enter 0 to quit.&quot;" newline="True"/>
+            <if expression="quit = true">
+                <then/>
+                <else/>
+            </if>
+            <do expression="guess != secret">
+                <input variable="guess"/>
+                <if expression="guess &gt; secret">
+                    <then>
+                        <output expression="&quot;Your guess is too high!&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="guess &lt; secret">
+                    <then>
+                        <output expression="&quot;Your guess is too low.&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;Your guess was correct!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
